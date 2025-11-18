@@ -7,10 +7,10 @@ export function App() {
 		<>
 			<Background></Background>
 			<DiscordUserCard
-				bannerImage="/public/banner.png"
+				bannerImage="/banner.png"
 				bannerColor="#3b6e8d"
 				username="EtherCD"
-				avatar="/public/avatar.png"
+				avatar="/avatar.png"
 				userLabel="DEV"
 				memberSince="Aug 30, 2007"
 				roles={[{ name: 'Member  "Pixelate It!"', color: "#fff" }]}
