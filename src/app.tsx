@@ -13,7 +13,11 @@ export function App() {
 				avatar="/avatar.png"
 				userLabel="DEV"
 				memberSince="Aug 30, 2007"
-				roles={[{ name: 'Member  "Pixelate It!"', color: "#fff" }]}
+				roles={[
+					{ name: "TypeScript", color: "#3178C6" },
+					{ name: "Java", color: "#f89820" },
+					{ name: "Zig", color: "#F7A41D" },
+				]}
 				badges={[
 					{
 						iconUrl: "https://raw.githubusercontent.com/pixelate-it/pixelbattle-frontend/1bf9e7ce41780ddbc31afca2871579f3270652ae/public/images/meta/favicon.svg",
@@ -25,7 +29,8 @@ export function App() {
 					url: "https://github.com/EtherCD",
 				}}
 			>
-				Junior Developer, just enthusiast.
+				Junior Developer, just enthusiast. <br />
+				Busy with studies
 			</DiscordUserCard>
 		</>
 	);
