@@ -1,9 +1,10 @@
 import { useEffect, useRef, useState } from "preact/hooks";
 import { RainEffect } from "./Rain";
+import { SnowEffect } from "./Snow";
 
-export const Effect = () => {
+export const Background = () => {
 	const refs = useRef<HTMLCanvasElement | null>(null);
-	const rain = useRef<RainEffect>();
+	const rain = useRef<SnowEffect>();
 	const [ctx, setCtx] = useState<CanvasRenderingContext2D>();
 	const onResize = () => {
 		if (!refs.current!) return;
@@ -26,7 +27,7 @@ export const Effect = () => {
 	useEffect(() => {
 		onResize();
 		window.onresize = onResize;
-		rain.current! = new RainEffect(window.innerWidth, window.innerHeight);
+		rain.current! = new SnowEffect(window.innerWidth, window.innerHeight);
 		setCtx(refs.current!.getContext("2d")!);
 		requestAnimationFrame(draw);
 	}, [refs.current]);
@@ -39,7 +40,7 @@ export const Effect = () => {
 				top: 0,
 				margin: 0,
 				padding: 0,
-				zIndex: 0,
+				zIndex: -1,
 			}}
 		></canvas>
 	);

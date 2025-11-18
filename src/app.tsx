@@ -1,11 +1,11 @@
 import "./app.css";
 import { DiscordUserCard } from "./components/DiscordUserCard";
-import { Effect } from "./components/Effect";
+import { Background } from "./components/Background";
 
 export function App() {
 	return (
 		<>
-			<Effect></Effect>
+			<Background></Background>
 			<DiscordUserCard
 				bannerImage="/public/banner.png"
 				bannerColor="#3b6e8d"
