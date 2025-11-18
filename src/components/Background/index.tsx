@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState } from "preact/hooks";
-import { RainEffect } from "./Rain";
 import { SnowEffect } from "./Snow";
 
 export const Background = () => {
