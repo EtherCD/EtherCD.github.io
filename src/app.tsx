@@ -13,6 +13,10 @@ export function App() {
 				avatar="/avatar.png"
 				userLabel="DEV"
 				memberSince="Aug 30, 2007"
+				nitro={{
+					accent: "#886636",
+					additional: "#f3ca88",
+				}}
 				roles={[
 					{ name: "TypeScript", color: "#3178C6" },
 					{ name: "Java", color: "#f89820" },
@@ -28,6 +32,7 @@ export function App() {
 					text: "See my Github",
 					url: "https://github.com/EtherCD",
 				}}
+				thinks="Buzzzzzy"
 			>
 				Junior Developer, just enthusiast. <br />
 				Busy with studies
