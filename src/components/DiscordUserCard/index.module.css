@@ -30,10 +30,13 @@
 
 .card-header .banner-img {
 	width: 100%;
-	height: 106px;
+	height: 105px;
 	background-position: center !important;
 	background-size: 100% auto !important;
-	border-radius: 6px 6px 0 0;
+
+	mask: url("/banner.svg") center/contain no-repeat;
+	-webkit-mask: url("/banner.svg") center/contain no-repeat;
+	/* border-radius: 6px 6px 0 0; */
 	overflow: hidden;
 }
 
@@ -52,11 +55,10 @@
 
 .profile-header .profile-logo {
 	position: relative;
-	border: 6px solid #292b2f;
 	border-radius: 50%;
-	left: -9px;
-	top: -55px;
-	margin-bottom: -53px;
+	left: -4px;
+	top: -47px;
+	margin-bottom: -42px;
 }
 
 .profile-header .profile-logo img {
@@ -161,9 +163,9 @@
 }
 
 .roles .roles-list .role {
-	border: 1px solid rgba(225, 255, 255, 0.5);
+	border: 1px solid rgba(225, 255, 255, 0.2);
 	color: #f5f5f5;
-	border-radius: 23px;
+	border-radius: 6px;
 	font-size: 11px;
 	font-weight: 300;
 	padding: 3px 6px;
@@ -204,8 +206,8 @@
 }
 
 .profile-thinks {
-	margin-top: -27px;
-	margin-left: -5px;
+	margin-top: -25px;
+	margin-left: 6px;
 }
 
 .profile-thinks p {
@@ -214,4 +216,31 @@
 	padding-left: 12px;
 	padding-top: 23px;
 	font-size: 12.5px;
+}
+
+.buttons {
+	display: flex;
+	gap: 10px;
+}
+
+.btn {
+	display: flex;
+	align-items: center;
+	text-decoration: none;
+	background-color: var(--accent);
+	border: 1px solid rgba(225, 255, 255, 0.2);
+	padding: 10px;
+	border-radius: 10px;
+	color: #fff;
+	font-size: 12.5px;
+	margin-top: 12px;
+	width: max-content;
+}
+
+.btn:hover {
+	color: var(--additional);
+}
+
+.btn img {
+	margin-right: 7px;
 }

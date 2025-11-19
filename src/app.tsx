@@ -28,10 +28,13 @@ export function App() {
 						tooltip: "Pixelate It! Dev",
 					},
 				]}
-				button={{
-					text: "See my Github",
-					url: "https://github.com/EtherCD",
-				}}
+				buttons={[
+					{
+						text: "My Github",
+						url: "https://github.com/EtherCD",
+						iconUrl: "/icons/github.svg",
+					},
+				]}
 				thinks="Buzzzzzy"
 			>
 				Junior Developer, just enthusiast. <br />

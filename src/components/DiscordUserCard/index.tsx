@@ -1,5 +1,6 @@
 import type { ComponentChildren } from "preact";
 import styles from "./index.module.css";
+import { useEffect, useRef, useState } from "preact/hooks";
 
 interface Props {
 	bannerImage?: string;
@@ -18,21 +19,32 @@ interface Props {
 	roles: Array<{ name: string; color: string }>;
 	availableRoles?: Array<{ name: string; color: string }>;
 	acceptMessages?: boolean;
-	button?: { text: string; url: string };
+	buttons?: Array<{ text: string; url: string; iconUrl: string }>;
 	userId?: string;
 	children?: ComponentChildren;
 }
 
 export const DiscordUserCard = (props: Props) => {
+	const cardRef = useRef<HTMLDivElement>(null);
+	const [height, setHeight] = useState<number>(0);
+
+	useEffect(() => {
+		if (cardRef.current) {
+			setHeight(cardRef.current.clientHeight);
+		}
+	}, [cardRef.current]);
+
 	return (
 		<>
 			<div
+				ref={cardRef}
 				class={styles["card-border"]}
 				style={
 					props.nitro
 						? {
 								"--accent": props.nitro.accent,
 								"--additional": props.nitro.additional,
+								"--height": height,
 						  }
 						: {}
 				}
@@ -95,6 +107,17 @@ export const DiscordUserCard = (props: Props) => {
 										</div>
 									))}
 								</div>
+							</div>
+						)}
+
+						{props.buttons && (
+							<div class={styles["buttons"]}>
+								{props.buttons.map((v, i, _) => (
+									<a href={v.url} target="_blank" class={styles["btn"]} key={i}>
+										<img src={v.iconUrl} />
+										{v.text}
+									</a>
+								))}
 							</div>
 						)}
 					</div>
