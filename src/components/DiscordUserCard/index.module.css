@@ -12,17 +12,19 @@
 	background: linear-gradient(180deg, var(--accent), var(--additional)) border-box, #111 padding-box;
 	mask-composite: exclude; /* нужно, чтобы "вырезать" внутреннюю часть */
 	-webkit-mask-composite: xor;
+	max-width: 310px;
 }
 
 .card {
 	width: 300px;
+	max-width: 300px;
 	background: rgba(0, 0, 0, 0.55);
 	padding-bottom: 14px;
 }
 
 .card-header .banner {
 	width: 100%;
-	height: 60px;
+	height: 105px;
 	background: v-bind(bannerColor);
 	border-radius: 6px 6px 0 0;
 	overflow: hidden;

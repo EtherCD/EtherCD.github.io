@@ -7,25 +7,56 @@
 html,
 body {
 	position: relative;
+	justify-items: auto;
+	scroll-behavior: smooth;
 }
 
-.logo {
-	height: 6em;
-	padding: 1.5em;
-}
-.logo:hover {
-	filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.preact:hover {
-	filter: drop-shadow(0 0 2em #673ab8aa);
+.general {
+	display: flex;
+	justify-items: center;
+	place-items: center;
+	color: #e0ecf2;
+	height: 100vh;
 }
 
-.card {
-	padding: 2em;
+.general .always {
+	width: 40vw;
 }
 
-.read-the-docs {
-	color: #888;
+.general .links p {
+	font-weight: 300;
+	font-size: 20px;
+}
+
+h1 {
+	font-weight: 100;
+}
+
+.flux {
+	display: flex;
+	gap: 20px;
+}
+
+#projects {
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+@media screen and (max-width: 931px) {
+	.flux {
+		display: block;
+	}
+	.general {
+		margin-top: 12vh;
+		flex-direction: column;
+		align-items: center;
+	}
+	.general p {
+		margin-bottom: 20px;
+	}
+	.general .always {
+		width: auto;
+	}
 }
 
 body {

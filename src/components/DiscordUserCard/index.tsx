@@ -11,7 +11,7 @@ interface Props {
 	};
 	thinks?: string;
 	avatar: string;
-	badges: Array<{ iconUrl: string; tooltip: string }>;
+	badges?: Array<{ iconUrl: string; tooltip: string }>;
 	username: string;
 	discriminator?: string;
 	userLabel?: string;
@@ -20,7 +20,7 @@ interface Props {
 	availableRoles?: Array<{ name: string; color: string }>;
 	acceptMessages?: boolean;
 	buttons?: Array<{ text: string; url: string; iconUrl: string }>;
-	userId?: string;
+	userId: string;
 	children?: ComponentChildren;
 }
 
@@ -77,10 +77,10 @@ export const DiscordUserCard = (props: Props) => {
 							)}
 						</div>
 						<div class={styles["user-info"]}>
-							<p class={styles["username"]}>EtherCD</p>
+							<p class={styles["username"]}>{props.username}</p>
 							<div class={styles["userid"]}>
-								<p>ethercd</p>
-								{props.badges?.length > 0 && (
+								<p>{props.userId}</p>
+								{props.badges && props.badges?.length > 0 && (
 									<div class={styles["badges-container"]}>
 										{props.badges.map((badge) => (
 											<div class={styles["badge-item"]} key={badge.iconUrl}>
@@ -114,7 +114,7 @@ export const DiscordUserCard = (props: Props) => {
 							<div class={styles["buttons"]}>
 								{props.buttons.map((v, i, _) => (
 									<a href={v.url} target="_blank" class={styles["btn"]} key={i}>
-										<img src={v.iconUrl} />
+										{v.iconUrl.length > 0 && <img src={v.iconUrl} />}
 										{v.text}
 									</a>
 								))}

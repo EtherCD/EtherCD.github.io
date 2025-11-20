@@ -11,15 +11,15 @@ export const Background = () => {
 		if (!refs.current!) return;
 
 		const canvas = refs.current!;
-		canvas.width = window.innerWidth;
-		canvas.height = window.innerHeight;
+		canvas.width = document.body.clientWidth;
+		canvas.height = document.body.clientHeight;
 	};
 
 	const draw = () => {
 		requestAnimationFrame(draw);
 		if (ctx) {
-			const width = window.innerWidth;
-			const height = window.innerHeight;
+			const width = document.body.clientWidth;
+			const height = document.body.clientHeight;
 
 			// const baseW = 1920;
 			// const baseH = 1080;
@@ -44,7 +44,7 @@ export const Background = () => {
 	useEffect(() => {
 		onResize();
 		window.onresize = onResize;
-		rain.current! = new SnowEffect(window.innerWidth, window.innerHeight);
+		rain.current! = new SnowEffect(document.body.clientWidth, document.body.clientHeight);
 		setCtx(refs.current!.getContext("2d")!);
 		requestAnimationFrame(draw);
 	}, [refs.current]);
@@ -52,7 +52,7 @@ export const Background = () => {
 		<canvas
 			ref={refs}
 			style={{
-				position: "fixed",
+				position: "absolute",
 				left: 0,
 				top: 0,
 				margin: 0,
