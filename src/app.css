@@ -20,21 +20,30 @@ body {
 }
 
 .general .always {
-	width: 40vw;
+	width: 20vw;
 }
 
-.general .links p {
+.general .always h1 {
 	font-weight: 300;
-	font-size: 20px;
+}
+
+.general .links {
+	width: 20vw;
+	text-align: right;
+	font-weight: 300;
+	font-size: 28px;
 }
 
 h1 {
-	font-weight: 100;
+	font-weight: 300;
 }
 
 .flux {
 	display: flex;
 	gap: 20px;
+	align-items: flex-start;
+	justify-content: center;
+	margin-bottom: 25vh;
 }
 
 #projects {
@@ -44,10 +53,12 @@ h1 {
 
 @media screen and (max-width: 931px) {
 	.flux {
-		display: block;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
 	}
 	.general {
-		margin-top: 12vh;
+		margin-top: 22vh;
 		flex-direction: column;
 		align-items: center;
 	}
@@ -57,12 +68,18 @@ h1 {
 	.general .always {
 		width: auto;
 	}
+	.general .links {
+		text-align: center;
+	}
 }
 
 body {
-	background-color: #323339;
+	background-image: url("/background.svg");
 	background-size: cover;
-	background-position: center;
+	background-position: center top;
 	background-repeat: no-repeat;
-	background-blend-mode: overlay;
+}
+
+footer {
+	text-align: center;
 }

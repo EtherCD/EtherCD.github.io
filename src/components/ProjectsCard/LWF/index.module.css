@@ -1,0 +1,46 @@
+.card-border {
+	padding: 4px;
+	background: linear-gradient(180deg, #0099cc, #666666) border-box, #111 padding-box;
+	mask-composite: exclude;
+	-webkit-mask-composite: xor;
+	max-width: 320px;
+	min-height: 10px;
+}
+
+.card {
+	width: 250px;
+	background: linear-gradient(0deg, #0099cc, #666666);
+	padding: 10px;
+}
+
+.card h1 {
+	font-weight: 500;
+	font-size: 16px;
+}
+
+.header {
+	display: flex;
+	gap: 10px;
+}
+
+.header img {
+	width: 60px;
+	margin-top: -60px;
+}
+
+.card a {
+	display: flex;
+	align-items: center;
+	text-decoration: none;
+	background-color: #00aae2;
+	padding: 10px;
+	color: #fff;
+	font-size: 12.5px;
+	margin-top: 12px;
+	width: max-content;
+	font: "JetBrains Mono", monospace;
+}
+
+.card a img {
+	margin-right: 7px;
+}

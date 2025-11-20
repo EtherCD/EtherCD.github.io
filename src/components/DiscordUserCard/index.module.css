@@ -1,18 +1,16 @@
 * {
 	margin: 0;
 	padding: 0;
-	font-family: "Whitney", sans-serif;
-	box-sizing: border-box;
-	color: white;
 }
 
 .card-border {
 	padding: 4px;
 	border-radius: 6px;
 	background: linear-gradient(180deg, var(--accent), var(--additional)) border-box, #111 padding-box;
-	mask-composite: exclude; /* нужно, чтобы "вырезать" внутреннюю часть */
+	mask-composite: exclude;
 	-webkit-mask-composite: xor;
 	max-width: 310px;
+	font-family: "Whitney", sans-serif;
 }
 
 .card {
@@ -152,6 +150,7 @@
 	margin-top: 10px;
 	color: white;
 	width: 280px;
+	max-width: 95%;
 }
 
 .roles {
