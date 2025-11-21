@@ -1,0 +1,15 @@
+.footer {
+	display: flex;
+
+	justify-content: space-between;
+}
+
+.footer img {
+	width: 40px;
+	margin-left: 10px;
+}
+
+.footer div {
+	display: flex;
+	font: 25px "Ubuntu", sans-serif;
+}

@@ -1,0 +1,8 @@
+.select {
+	border: none;
+	padding: 10px;
+}
+
+.select:active {
+	outline: none;
+}

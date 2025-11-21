@@ -4,13 +4,18 @@
 	mask-composite: exclude;
 	-webkit-mask-composite: xor;
 	max-width: 320px;
-	min-height: 10px;
+	min-height: 240px;
 }
 
 .card {
 	width: 250px;
 	background: linear-gradient(0deg, #0099cc, #666666);
 	padding: 10px;
+	display: flex;
+	position: relative;
+	flex-direction: column;
+	align-items: center;
+	min-height: 220px;
 }
 
 .card h1 {
@@ -25,7 +30,7 @@
 
 .header img {
 	width: 60px;
-	margin-top: -60px;
+	margin-top: -50px;
 }
 
 .card a {
@@ -39,6 +44,9 @@
 	margin-top: 12px;
 	width: max-content;
 	font: "JetBrains Mono", monospace;
+	margin-top: auto;
+
+	justify-content: center;
 }
 
 .card a img {

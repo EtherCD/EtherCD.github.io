@@ -1,8 +1,4 @@
 :root {
-	font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-	line-height: 1.5;
-	font-weight: 400;
-
 	color-scheme: light dark;
 	color: rgba(255, 255, 255, 0.87);
 	background-color: #242424;
@@ -30,4 +26,14 @@ body {
 	min-width: 320px;
 	min-height: 100vh;
 	z-index: 0;
+}
+
+@font-face {
+	font-family: "Comic Sans MS";
+	src: url(/fonts/ComicSansMS.ttf);
+}
+
+@font-face {
+	font-family: "Minecraft Regular";
+	src: url(/fonts/minecraft-regular.otf);
 }

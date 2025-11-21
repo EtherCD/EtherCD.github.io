@@ -71,8 +71,8 @@ export const DiscordUserCard = (props: Props) => {
 							)}
 							{props.thinks && (
 								<div class={styles["profile-thinks"]}>
-									<p>{props.thinks.length > 26 ? props.thinks.slice(0, 25) + "..." : props.thinks}</p>
-									<img src="/thinks.svg" />
+									<p>{props.thinks.length > 23 ? props.thinks.slice(0, 22) + "..." : props.thinks}</p>
+									<img src="/assets/thinks.svg" />
 								</div>
 							)}
 						</div>

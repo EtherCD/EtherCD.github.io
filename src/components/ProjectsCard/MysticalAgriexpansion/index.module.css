@@ -1,22 +1,22 @@
 .card-border {
-	padding: 4px;
-	background: linear-gradient(180deg, #1b1b1b, #1b1b1b) border-box, #111 padding-box;
 	mask-composite: exclude;
 	-webkit-mask-composite: xor;
 	max-width: 320px;
 }
 
 .card {
-	width: 250px;
-	background-image: #3a3a3a;
+	width: 260px;
+	height: 220px;
+	background-image: url(/assets/mae.png);
+
 	padding: 10px;
-	min-height: 220px;
 
 	position: relative;
 
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	font-family: "Minecraft Regular";
 }
 
 .card h1 {
@@ -32,19 +32,24 @@
 
 .about {
 	font-size: 14px;
+	margin-top: 10px;
 }
 
 .card .logo {
-	width: 60px;
+	width: 85px; /*sssssssssssыssыыыыs*/
+	height: 85px;
 }
 
 .card a {
-	background-color: #154cb7;
-	padding: 12px 18px;
-	border-radius: 5px;
+	background-image: url(/assets/minecraft-button-inactive.svg);
+	background-size: cover;
+	background-position: center top;
+	width: 257px;
+	height: 30px;
 	font-weight: 600;
-	box-shadow: 0 -4px #0003 inset;
-	transition: box-shadow 0.2s;
+	text-align: center;
+	padding-top: 5px;
+	font: 14px;
 	text-decoration: none;
 	color: inherit;
 	pointer-events: auto;
@@ -53,18 +58,24 @@
 	align-self: center;
 }
 
+.card a:hover {
+	background-image: url(/assets/minecraft-button-active.svg);
+}
+
 .card a img {
 	margin-right: 7px;
 }
 
 .window {
 	padding: 5px;
-	background-color: #000;
 	margin-bottom: 5px;
-	border-radius: 7px;
 }
 
 .splitted {
 	display: flex;
 	min-width: 250px;
+}
+
+.about {
+	color: #fff;
 }

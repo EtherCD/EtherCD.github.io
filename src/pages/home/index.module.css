@@ -1,0 +1,60 @@
+.general {
+	display: flex;
+	justify-items: center;
+	place-items: center;
+	color: #e0ecf2;
+	height: 100vh;
+}
+
+.general .always {
+	width: 20vw;
+}
+
+.general .always h1 {
+	font-weight: 300;
+}
+
+.general .links {
+	width: 20vw;
+	text-align: right;
+	font-weight: 300;
+	font-size: 28px;
+}
+
+h1 {
+	font-weight: 300;
+}
+
+.flux {
+	display: flex;
+	gap: 20px;
+	justify-content: center;
+	margin-bottom: 25vh;
+}
+
+.projects {
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+@media screen and (max-width: 931px) {
+	.flux {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.general {
+		margin-top: 22vh;
+		flex-direction: column;
+		align-items: center;
+	}
+	.general p {
+		margin-bottom: 20px;
+	}
+	.general .always {
+		width: auto;
+	}
+	.general .links {
+		text-align: center;
+	}
+}

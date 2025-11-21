@@ -10,12 +10,11 @@ function random(min: number, max: number) {
 }
 
 export class StarEffect {
-	maxParts = 250;
+	maxParts = 100;
 	particles: Particle[] = [];
 	delay = random(300, 500);
 	time = Date.now();
 	constructor(width: number, height: number) {
-		this.maxParts = 350;
 		for (var a = 0; a < this.maxParts; a++) {
 			this.particles.push({
 				x: random(0, width),
@@ -35,7 +34,7 @@ export class StarEffect {
 
 			ctx.beginPath();
 			ctx.fillStyle = "rgba(255,255,255,0.6)";
-			ctx.globalAlpha = p.t / 1000;
+			ctx.globalAlpha = p.t / 3000;
 			ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
 			ctx.fill();
 			ctx.closePath();

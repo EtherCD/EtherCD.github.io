@@ -1,8 +1,6 @@
 import { useEffect, useRef, useState } from "preact/hooks";
 import { StarEffect } from "./Stars";
 
-const image = new Image();
-image.src = "/background.svg";
 export const Background = () => {
 	const refs = useRef<HTMLCanvasElement | null>(null);
 	const rain = useRef<StarEffect>();

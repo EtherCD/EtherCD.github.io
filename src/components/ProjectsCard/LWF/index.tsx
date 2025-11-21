@@ -1,17 +1,22 @@
+import { Translation } from "i18nano";
 import styles from "./index.module.css";
+import { Tooltip } from "../../Basic/Tooltip";
 
 export const LWFProjectCard = () => {
 	return (
 		<div class={styles["card-border"]}>
 			<div class={styles.card}>
 				<div class={styles.header}>
-					<img src="/lwf.svg" />
-					<h1>Lightweight Format - A very compact, compression friendly, binary format for storing JSON like objects.</h1>
+					<img src="/assets/lwf.svg" />
+					<h1>
+						<Translation path={"projects.lwf.about"} />
+					</h1>
 				</div>
 				<a href="https://lwf.ether.cd" target="_blank">
-					<img src={"/link.svg"} />
-					lwf website
+					<img src={"/icons/link.svg"} />
+					<Translation path={"projects.lwf.button"} />
 				</a>
+				<Tooltip path={"projects.lwf.tooltip"} />
 			</div>
 		</div>
 	);

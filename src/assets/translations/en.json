@@ -1,0 +1,20 @@
+{
+	"name": "English",
+	"card.thinks": "More electricity!",
+	"card.about": "I'm an 18-year-old junior programmer, enthusiastic designer, and first-class electrician. I'm a fourth-year engineering student.",
+	"card.button": "My Github",
+	"h1.always": "It's always starry here",
+	"h1.list.projects": "Projects",
+	"h1.list.contacts": "Contacts",
+	"h1.projects": "Projects",
+
+	"projects.lwf.about": "Lightweight Format - A very compact, compression friendly, binary format for storing JSON like objects.",
+	"projects.lwf.button": "lwf website",
+	"projects.lwf.tooltip": "I created a format standard. I used my own developments to reduce the size of numbers and fractions (compact variant, fraction encoding).",
+	"projects.pb.about": "A place where you can compete for a spot on the canvas with other players",
+	"projects.pb.button": "Website",
+	"projects.pb.tooltip": "A project that brings players together for the sake of creativity. Using zustand, preact, and pixi.js technologies.",
+	"projects.mae.about": "Addon for Mystical Agriculture, adds new crop types and other ideas...",
+	"projects.mae.button": "Curseforge",
+	"projects.mae.tooltip": "Experience working with other people's code and integration."
+}
