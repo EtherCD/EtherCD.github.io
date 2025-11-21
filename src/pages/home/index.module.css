@@ -4,14 +4,28 @@
 	place-items: center;
 	color: #e0ecf2;
 	height: 100vh;
+	transition: 0.5s;
 }
 
 .general .always {
-	width: 20vw;
+	width: 40vw;
 }
 
-.general .always h1 {
+.enjoy {
+	color: #ffffff99;
+}
+
+.always h1 {
 	font-weight: 300;
+	font-size: 30px;
+	line-height: 45px;
+}
+
+.projects {
+	font-weight: 300;
+	font-size: 30px;
+	line-height: 45px;
+	margin-bottom: 30px;
 }
 
 .general .links {
@@ -54,4 +68,22 @@ h1 {
 	.general .links {
 		text-align: center;
 	}
+}
+
+@media screen and (min-width: 1920px) {
+	.card {
+		transform: scale(1.25);
+	}
+	.flux {
+		transform: scale(1.25);
+	}
+}
+
+.contacts {
+	display: flex;
+}
+
+.contacts img {
+	margin-left: 10px;
+	width: 35px;
 }

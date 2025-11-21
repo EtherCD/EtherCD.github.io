@@ -64,6 +64,10 @@
 	border-radius: 7px;
 }
 
+.window p {
+	font-size: 16px;
+}
+
 .splitted {
 	display: flex;
 	min-width: 250px;
