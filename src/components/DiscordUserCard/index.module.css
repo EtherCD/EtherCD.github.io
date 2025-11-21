@@ -11,6 +11,8 @@
 	-webkit-mask-composite: xor;
 	max-width: 310px;
 	font-family: "hind", sans-serif;
+	box-sizing: border-box;
+	color: white;
 }
 
 .card {

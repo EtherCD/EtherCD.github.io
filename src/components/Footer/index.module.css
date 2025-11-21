@@ -2,6 +2,7 @@
 	display: flex;
 
 	justify-content: space-between;
+	text-align: center;
 }
 
 .footer img {
@@ -12,4 +13,16 @@
 .footer div {
 	display: flex;
 	font: 25px "Ubuntu", sans-serif;
+}
+
+@media screen and (max-width: 931px) {
+	.footer {
+		flex-direction: column;
+	}
+	.footer img {
+		margin-left: 0px;
+	}
+	.footer p {
+		margin-left: 30px;
+	}
 }
