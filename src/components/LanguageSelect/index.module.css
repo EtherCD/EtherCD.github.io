@@ -1,6 +1,9 @@
 .select {
 	border: none;
 	padding: 10px;
+	background-color: #98971a;
+	color: white;
+	font: 18px "Ubuntu", sans-serif;
 }
 
 .select:active {
