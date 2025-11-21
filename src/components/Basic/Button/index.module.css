@@ -1,0 +1,7 @@
+.button {
+	background: #acb0b8;
+	background: linear-gradient(45deg, rgba(172, 176, 184, 1) 0%, rgba(77, 86, 101, 1) 100%);
+	padding: 10px 5px;
+	border-radius: 5px;
+	color: #fff;
+}
