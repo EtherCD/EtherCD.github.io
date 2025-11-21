@@ -3,16 +3,15 @@
     flex-direction: column;
 
     & > section {
-        scroll-snap-align: start;
         display: flex;
         align-items: center;
         justify-content: center;
+        scroll-snap-align: start;
     }
 }
 
 .general {
     height: 100vh;
-    transition: 0.5s;
     gap: 20px;
 
     @media screen and (max-width: 920px) {
@@ -71,15 +70,6 @@ h1 {
     }
     .general .links {
         text-align: center;
-    }
-}
-
-@media screen and (min-width: 1920px) {
-    .card {
-        transform: scale(1.25);
-    }
-    .flux {
-        transform: scale(1.25);
     }
 }
 
