@@ -1,89 +1,93 @@
-.general {
-	display: flex;
-	justify-items: center;
-	place-items: center;
-	color: #e0ecf2;
-	height: 100vh;
-	transition: 0.5s;
+.container {
+    display: flex;
+    flex-direction: column;
+
+    & > section {
+        scroll-snap-align: start;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 }
 
-.general .always {
-	width: 40vw;
+.general {
+    height: 100vh;
+    transition: 0.5s;
+    gap: 20px;
+
+    @media screen and (max-width: 920px) {
+        flex-direction: column;
+    }
 }
 
 .enjoy {
-	color: #ffffff99;
+    color: #ffffff99;
 }
 
 .always h1 {
-	font-weight: 300;
-	font-size: 30px;
-	line-height: 45px;
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 45px;
 }
 
 .projects {
-	font-weight: 300;
-	font-size: 30px;
-	line-height: 45px;
-	margin-bottom: 30px;
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 45px;
+    text-align: center;
+}
+
+.projects_section {
+    flex-direction: column;
+    gap: 20px;
 }
 
 .general .links {
-	width: 20vw;
-	text-align: right;
-	font-weight: 300;
-	font-size: 28px;
+    width: 20vw;
+    text-align: right;
+    font-weight: 300;
+    font-size: 28px;
 }
 
 h1 {
-	font-weight: 300;
+    font-weight: 300;
 }
 
 .flux {
-	display: flex;
-	gap: 20px;
-	justify-content: center;
-	margin-bottom: 25vh;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 25vh;
+
+    @media screen and (max-width: 920px) {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
-.projects {
-	text-align: center;
-	margin-bottom: 20px;
-}
-
-@media screen and (max-width: 931px) {
-	.flux {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-	}
-	.general {
-		margin-top: 22vh;
-		flex-direction: column;
-		align-items: center;
-	}
-	.general .always {
-		width: auto;
-	}
-	.general .links {
-		text-align: center;
-	}
+@media screen and (max-width: 920px) {
+    .general .always {
+        width: auto;
+    }
+    .general .links {
+        text-align: center;
+    }
 }
 
 @media screen and (min-width: 1920px) {
-	.card {
-		transform: scale(1.25);
-	}
-	.flux {
-		transform: scale(1.25);
-	}
+    .card {
+        transform: scale(1.25);
+    }
+    .flux {
+        transform: scale(1.25);
+    }
 }
 
 .contacts {
-	display: flex;
+    display: flex;
 }
 
 .contacts img {
-	margin-left: 10px;
-	width: 35px;
+    margin-left: 10px;
+    width: 35px;
 }

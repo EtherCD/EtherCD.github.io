@@ -1,24 +1,25 @@
 #app {
-	max-width: 1280px;
-	margin: 0 auto;
-	padding: 2rem;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem;
 }
 
 html,
 body {
-	position: relative;
-	justify-items: auto;
-	scroll-behavior: smooth;
-	font-family: "Ubuntu", sans-serif;
+    position: relative;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    font-family: "Ubuntu", sans-serif;
 }
 
 body {
-	background-image: url(/assets/background.svg);
-	background-size: cover;
-	background-position: center top;
-	background-repeat: no-repeat;
+    background-image: url(/assets/background.svg);
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
 }
 
 footer {
-	text-align: center;
+    text-align: center;
 }

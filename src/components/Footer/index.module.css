@@ -1,28 +1,26 @@
 .footer {
-	display: flex;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
 
-	justify-content: space-between;
-	text-align: center;
-}
+    & > * {
+        display: flex;
+    }
 
-.footer img {
-	width: 40px;
-	margin-left: 10px;
-}
+    & > div {
+        font: 25px "Ubuntu", sans-serif;
+        display: flex;
+        gap: 10px;
+    }
 
-.footer div {
-	display: flex;
-	font: 25px "Ubuntu", sans-serif;
-}
+    & img {
+        width: 40px;
+    }
 
-@media screen and (max-width: 931px) {
-	.footer {
-		flex-direction: column;
-	}
-	.footer img {
-		margin-left: 0px;
-	}
-	.footer p {
-		margin-left: 30px;
-	}
+    @media screen and (max-width: 920px) {
+        flex-direction: column;
+        gap: 10px;
+    }
 }
