@@ -26,7 +26,7 @@
 	"can.graphics.2": "project",
 	"can.connections.0": "I understand network connections and data transfer optimization. I can effectively work with binary protocols, including protobuf, and I developed a binary protocol called LWF for the game.",
 	"can.integrations.0": "I worked on integrating zig into node.js and integrating modifications within my",
-	"can.integrations.1": " I can quickly understand other developer's code and integrate with theirs. I developed my own solutions for runtime connection and module loading.",
+	"can.integrations.1": " I developed my own solutions for runtime connection and module loading.",
 
 	"projects.lwf.about": "Lightweight Format - A very compact, compression friendly, binary format for storing JSON like objects.",
 	"projects.lwf.button": "lwf website",
