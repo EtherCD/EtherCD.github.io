@@ -11,15 +11,14 @@ import { Button } from "../../components/Basic/Button";
 
 export const HomePage = () => {
 	const i18n = useTranslation();
-	const { mode, setMode } = useEffectMode();
+	const { mode, next } = useEffectMode();
 
 	return (
 		<div class={styles.container}>
 			<section class={styles.general}>
 				<div class={styles.always}>
 					<h1>
-						{mode === "stars" && <Translation path={"h1.starry"} />}
-						{mode === "snow" && <Translation path={"h1.snowy"} />}
+						<Translation path={"h1." + mode} />
 					</h1>
 					<h1 class={styles.enjoy}>
 						<Translation path={"h1.enjoy"} />
@@ -34,11 +33,12 @@ export const HomePage = () => {
 						</a>
 						<Button
 							onClick={() => {
-								setMode(mode === "stars" ? "snow" : "stars");
+								next();
+								console.log("FUCK?");
 							}}
 							accentColor={"#cc241d"}
 						>
-							<Translation path={"button.mode." + (mode === "snow" ? 0 : 1)} />
+							<Translation path={"button.mode." + mode} />
 						</Button>
 					</div>
 				</div>

@@ -1,6 +1,5 @@
-function random(min: number, max: number) {
-	return Math.random() * (max - min) + min;
-}
+import { random } from "../../utils/random";
+import { Effect } from "./Effect";
 
 interface Particle {
 	x: number;
@@ -8,14 +7,16 @@ interface Particle {
 	l: number;
 	xs: number;
 	ys: number;
+	d: number;
 }
 
-export class RainEffect {
+export class RainEffect extends Effect {
 	maxParts = 250;
 	particles: Particle[] = [];
 	delay = random(300, 500);
 	time = Date.now();
 	constructor(width: number, height: number) {
+		super(width, height);
 		for (var a = 0; a < this.maxParts; a++) {
 			this.particles.push({
 				x: random(0, width) - 10,
@@ -23,6 +24,7 @@ export class RainEffect {
 				l: random(0.5, 2.5),
 				xs: random(0, 1) - 5,
 				ys: random(0.3, 3) + 6,
+				d: random(0, Math.PI * 2),
 			});
 		}
 	}

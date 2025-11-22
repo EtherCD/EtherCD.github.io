@@ -34,6 +34,16 @@ body.snow::before {
 	opacity: 0.5;
 }
 
+body.rain::before {
+	background-image: url(/assets/background-rs.svg);
+	opacity: 0.5; /*sssы*/
+}
+
+body.autumn::before {
+	background-image: url(/assets/autumn-tree.svg), url(/assets/background-rs.svg);
+	opacity: 0.5;
+}
+
 footer {
 	text-align: center;
 }

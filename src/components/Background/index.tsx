@@ -1,13 +1,16 @@
 import { useEffect, useRef, useState } from "preact/hooks";
 import { StarEffect } from "./Stars";
 import { SnowEffect } from "./Snow";
-import { useEffectMode } from "../../stores/mode";
+import { Effects, useEffectMode } from "../../stores/mode";
+import type { Effect } from "./Effect";
+import { RainEffect } from "./Rain";
+import { LeafFallEffect } from "./LeafFall";
 
 export const Background = () => {
 	const refs = useRef<HTMLCanvasElement | null>(null);
-	const stars = useRef<StarEffect>();
-	const snow = useRef<SnowEffect>();
+	const effects = useRef<Effect[]>([]);
 	const [ctx, setCtx] = useState<CanvasRenderingContext2D>();
+	const { mode } = useEffectMode();
 	const onResize = () => {
 		if (!refs.current!) return;
 
@@ -24,19 +27,31 @@ export const Background = () => {
 			ctx.clearRect(0, 0, width, height);
 			// ctx.fillStyle = "#282828";
 			const { mode } = useEffectMode.getState();
-			if (mode === "stars") stars.current!.render(ctx!, width, height);
-			else snow.current!.render(ctx!, width, height);
+			if (effects.current![Effects.indexOf(mode)]) effects.current![Effects.indexOf(mode)].render(ctx!, width, height);
 		}
+	};
+
+	const restartAllEffects = () => {
+		effects.current = [
+			new SnowEffect(document.body.clientWidth, document.body.clientHeight),
+			new RainEffect(document.body.clientWidth, document.body.clientHeight),
+			new StarEffect(document.body.clientWidth, document.body.clientHeight),
+			new LeafFallEffect(document.body.clientWidth, document.body.clientHeight),
+		];
 	};
 
 	useEffect(() => {
 		onResize();
 		window.onresize = onResize;
-		stars.current! = new StarEffect(document.body.clientWidth, document.body.clientHeight);
-		snow.current! = new SnowEffect(document.body.clientWidth, document.body.clientHeight);
+		restartAllEffects();
 		setCtx(refs.current!.getContext("2d")!);
 		requestAnimationFrame(draw);
 	}, [refs.current]);
+
+	useEffect(() => {
+		restartAllEffects();
+	}, [mode]);
+
 	return (
 		<>
 			<canvas

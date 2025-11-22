@@ -4,27 +4,39 @@ import { Effect } from "./Effect";
 interface Particle {
 	x: number;
 	y: number;
-	r: number;
+	l: number;
+	s: number;
+	d: number;
+	t: number;
 	xs: number;
 	ys: number;
 }
 
-export class SnowEffect extends Effect {
-	maxParts = 250;
+export class LeafFallEffect extends Effect {
+	maxParts = 50;
 	particles: Particle[] = [];
 	delay = random(300, 500);
 	time = Date.now();
+	images: HTMLImageElement[] = [];
 	constructor(width: number, height: number) {
 		super(width, height);
-		this.maxParts = 350;
 		for (var a = 0; a < this.maxParts; a++) {
 			this.particles.push({
-				x: random(0, width),
-				y: random(-height, height),
-				r: random(1.5, 3),
+				x: random(0, width) - 10,
+				y: random(0, height) - 10,
+				l: random(0.5, 2.5),
+				s: random(40, 60),
+				d: random(0, Math.PI * 2),
+				t: Math.random() > 0.5 ? 1 : 0,
 				xs: random(-0.5, 0.5),
-				ys: random(1, 3),
+				ys: random(0.2, 1),
 			});
+		}
+		const list = ["/assets/leaf.svg", "/assets/leaf-2.svg"];
+		for (const i of list) {
+			const img = new Image();
+			img.src = i;
+			this.images.push(img);
 		}
 	}
 
@@ -36,16 +48,28 @@ export class SnowEffect extends Effect {
 		for (var b = 0; b < this.particles.length; b++) {
 			var p = this.particles[b];
 
+			ctx.save();
+			ctx.translate(p.x, p.y);
+			const minAngle = Math.PI;
+			const maxAngle = Math.PI * 2;
+
+			const sway = Math.sin(p.y / 50);
+			const t = (sway + 1) / 2;
+
+			const angle = minAngle + t * (maxAngle - minAngle);
+
+			ctx.rotate(angle);
+
 			ctx.beginPath();
-			ctx.fillStyle = "rgba(255,255,255,0.6)";
-			ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-			ctx.fill();
+			ctx.drawImage(this.images[p.t], -p.s / 2, -p.s / 2, p.s, p.s);
 			ctx.closePath();
 
-			p.y += p.ys * timeFix;
-			p.x += p.xs * timeFix + Math.sin(p.y / 30) * 0.3;
+			ctx.restore();
 
-			if (p.y > height + p.r) {
+			p.y += p.ys * timeFix;
+			p.x += p.xs * timeFix + sway * 0.3;
+
+			if (p.y > height + p.s) {
 				p.y = random(-50, -10);
 				p.x = random(0, width);
 			}

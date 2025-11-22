@@ -43,10 +43,9 @@
 	background-color: #00aae2;
 	padding: 10px;
 	color: #fff;
-	font-size: 12.5px;
 	margin-top: 12px;
 	width: max-content;
-	font: "JetBrains Mono", monospace;
+	font: 12.5px "JetBrains Mono", monospace;
 	margin-top: auto;
 
 	justify-content: center;
