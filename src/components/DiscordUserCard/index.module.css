@@ -38,7 +38,6 @@
 
 	mask: url("/assets/banner.svg") center/contain no-repeat;
 	-webkit-mask: url("/assets/banner.svg") center/contain no-repeat;
-	/* border-radius: 6px 6px 0 0; */
 	overflow: hidden;
 }
 
@@ -48,8 +47,8 @@
 
 .profile-header {
 	position: relative;
-	display: flex; /* включаем флекс */
-	flex-direction: row; /* в ряд */
+	display: flex;
+	flex-direction: row;
 	align-items: center;
 	width: 92px;
 	border-radius: 100%;

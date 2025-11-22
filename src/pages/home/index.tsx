@@ -8,6 +8,7 @@ import { Footer } from "../../components/Footer";
 import { LanguageSelect } from "../../components/LanguageSelect";
 import { useEffectMode } from "../../stores/mode";
 import { Button } from "../../components/Basic/Button";
+import { Skill } from "../../components/Skill";
 
 export const HomePage = () => {
 	const i18n = useTranslation();
@@ -72,6 +73,30 @@ export const HomePage = () => {
 					</DiscordUserCard>
 				</div>
 			</section>
+
+			<section class={styles.projects_section}>
+				<h1 id="work" class={styles.projects}>
+					<Translation path={"can.title"} />
+				</h1>
+				<div class={styles.flux}>
+					<Skill header={i18n("can.0")} img="/assets/eos.svg" accentColor="#D65D0E" additionalColor="#7F445F">
+						<Translation path={"can.graphics.0"} />
+						<a href="https://github.com/pixelate-it/pixelbattle-frontend/tree/pixiless-next"> pixilness</a> <Translation path={"can.graphics.1"} />{" "}
+						<a href="https://github.com/pixelate-it">
+							<Translation path={"can.graphics.2"} />
+						</a>
+						.
+					</Skill>
+					<Skill header={i18n("can.1")} img="/assets/aether.svg" accentColor="#83A598" additionalColor="#7F445F">
+						<Translation path={"can.connections.0"} />
+					</Skill>
+					<Skill header={i18n("can.2")} img="/assets/umbriel.svg" accentColor="#AB3527" additionalColor="#7F445F">
+						<Translation path={"can.integrations.0"} />
+						<a href="https://github.com/EtherCD/MysticalAgriexpansion"> MAE</a>. <Translation path={"can.integrations.1"} />
+					</Skill>
+				</div>
+			</section>
+
 			<section class={styles.projects_section}>
 				<h1 id="projects" class={styles.projects}>
 					<Translation path={"h1.projects"} />

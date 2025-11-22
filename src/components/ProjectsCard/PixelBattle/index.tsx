@@ -22,7 +22,7 @@ export const PixelBattleCard = () => {
 						<Translation path={"projects.pb.about"} />
 					</p>
 				</div>
-				<a href="https://lwf.ether.cd" target="_blank">
+				<a href="https://pixelbattle.fun" target="_blank">
 					<Translation path={"projects.pb.button"} />
 				</a>
 				<Tooltip path={"projects.pb.tooltip"} />

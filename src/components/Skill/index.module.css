@@ -1,0 +1,64 @@
+.skill {
+	width: 300px;
+	height: 300px;
+	position: relative;
+	margin-top: 20px;
+	margin-right: 30px;
+}
+
+.border {
+	content: "";
+	width: 300px;
+	height: 300px;
+	position: absolute;
+	background: linear-gradient(180deg, var(--accent) 0%, var(--additional) 100%);
+	mask: url("/assets/skill.svg") center/contain no-repeat;
+	-webkit-mask: url("/assets/skill.svg") center/contain no-repeat;
+	border-radius: 4px; /*ss*/
+	transform: scale(1.03);
+}
+
+.background {
+	content: "";
+	width: 300px;
+	height: 300px;
+	position: absolute;
+	background: rgba(0, 0, 0, 0.55);
+	mask: url("/assets/skill.svg") center/contain no-repeat;
+	-webkit-mask: url("/assets/skill.svg") center/contain no-repeat;
+	border-radius: 4px; /*ss*/
+}
+
+.content {
+	position: relative;
+	z-index: 2;
+	padding: 20px;
+	width: 270px;
+}
+
+.skill img {
+	position: absolute;
+	width: 95px;
+	margin-left: -48px;
+	margin-top: -50px;
+}
+
+.skill h1 {
+	display: flex;
+	justify-content: center;
+	font-size: 30px;
+	margin-top: 10px;
+	height: 50px;
+	width: 229px;
+	margin-left: 50px;
+	margin-bottom: 10px;
+}
+
+.skill {
+	font-size: 18px;
+}
+
+.skill a {
+	color: #f9bb29;
+	text-decoration: none;
+}

@@ -16,6 +16,18 @@
 	"button.mode.rain": "Rain",
 	"button.mode.autumn": "Autumn",
 
+	"can.title": "I can work with",
+	"can.0": "Graphics",
+	"can.1": "Connections",
+	"can.2": "Integrations",
+
+	"can.graphics.0": "I've worked with webgl, pixi.js, ctx, and sfml. I can create animations, render for games, and optimize rendering. I created UI in webgl using shaders and SVG. You can see my experience on the ",
+	"can.graphics.1": "branch of this",
+	"can.graphics.2": "project",
+	"can.connections.0": "I understand network connections and data transfer optimization. I can effectively work with binary protocols, including protobuf, and I developed a binary protocol called LWF for the game.",
+	"can.integrations.0": "I worked on integrating zig into node.js and integrating modifications within my",
+	"can.integrations.1": ". I can quickly understand other developers' code and integrate with theirs. I developed my own solutions for runtime connection and module loading.",
+
 	"projects.lwf.about": "Lightweight Format - A very compact, compression friendly, binary format for storing JSON like objects.",
 	"projects.lwf.button": "lwf website",
 	"projects.lwf.tooltip": "I created a format standard. I used my own developments to reduce the size of numbers and fractions (compact variant, fraction encoding).",
