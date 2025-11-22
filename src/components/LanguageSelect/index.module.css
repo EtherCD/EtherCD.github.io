@@ -4,6 +4,7 @@
 	background-color: #98971a;
 	color: white;
 	font: 18px "Ubuntu", sans-serif;
+	border-radius: 4px;
 }
 
 .select:active {

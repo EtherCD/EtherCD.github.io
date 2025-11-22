@@ -26,12 +26,6 @@ export const HomePage = () => {
 					</h1>
 					<div class={styles.contacts}>
 						<LanguageSelect />
-						<a href="https://github.com/EtherCD" target="_blank">
-							<img src="/icons/github.svg" alt="" />
-						</a>
-						<a href="https://discord.com/users/930091767842353212" target="_blank">
-							<img src="/icons/discord.svg" alt="" />
-						</a>
 						<Button
 							onClick={() => {
 								next();
@@ -79,20 +73,34 @@ export const HomePage = () => {
 					<Translation path={"can.title"} />
 				</h1>
 				<div class={styles.flux}>
-					<Skill header={i18n("can.0")} img="/assets/eos.svg" accentColor="#D65D0E" additionalColor="#7F445F">
-						<Translation path={"can.graphics.0"} />
-						<a href="https://github.com/pixelate-it/pixelbattle-frontend/tree/pixiless-next"> pixilness</a> <Translation path={"can.graphics.1"} />{" "}
-						<a href="https://github.com/pixelate-it">
-							<Translation path={"can.graphics.2"} />
-						</a>
-						.
+					<Skill header={i18n("can.0")} img="/assets/eos.svg" accentColor="#94742B" additionalColor="#7F445F" cardUrl="/assets/eos-card.svg">
+						<p>
+							<Translation path={"can.graphics.0"} />
+							<a href="https://github.com/pixelate-it/pixelbattle-frontend/tree/pixiless-next" target="_blank">
+								{" "}
+								pixilness
+							</a>{" "}
+							<Translation path={"can.graphics.1"} />{" "}
+							<a href="https://github.com/pixelate-it" target="_blank">
+								<Translation path={"can.graphics.2"} />
+							</a>
+							.
+						</p>
 					</Skill>
-					<Skill header={i18n("can.1")} img="/assets/aether.svg" accentColor="#83A598" additionalColor="#7F445F">
-						<Translation path={"can.connections.0"} />
+					<Skill header={i18n("can.1")} img="/assets/aether.svg" accentColor="#83A598" additionalColor="#282828" cardUrl="/assets/aether-card.svg">
+						<p>
+							<Translation path={"can.connections.0"} />
+						</p>
 					</Skill>
-					<Skill header={i18n("can.2")} img="/assets/umbriel.svg" accentColor="#AB3527" additionalColor="#7F445F">
-						<Translation path={"can.integrations.0"} />
-						<a href="https://github.com/EtherCD/MysticalAgriexpansion"> MAE</a>. <Translation path={"can.integrations.1"} />
+					<Skill header={i18n("can.2")} img="/assets/umbriel.svg" accentColor="#282828" additionalColor="#AB3527" cardUrl="/assets/umbriel-card.svg">
+						<p>
+							<Translation path={"can.integrations.0"} />
+							<a href="https://github.com/EtherCD/MysticalAgriexpansion" target="_blank">
+								{" "}
+								MAE
+							</a>
+							. <Translation path={"can.integrations.1"} />
+						</p>
 					</Skill>
 				</div>
 			</section>

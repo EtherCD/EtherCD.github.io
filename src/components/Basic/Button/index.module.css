@@ -3,4 +3,6 @@
 	padding: 10px;
 	color: #fff;
 	font: 16px "JetBrains Mono", sans-serif;
+	border-radius: 4px;
+	min-width: 100px;
 }
