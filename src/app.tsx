@@ -1,4 +1,4 @@
-import "./app.css";
+import "./styles/app.css";
 import { Background } from "./components/Background";
 import { TranslationProvider } from "i18nano";
 import { translations, initialLanguage } from "./utils/i18nano-integration";

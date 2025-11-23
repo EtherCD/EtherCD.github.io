@@ -13,6 +13,7 @@
 	z-index: 10;
 	box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.35);
 	-webkit-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.35);
+	right: 0;
 }
 
 .tooltip-up {
@@ -40,6 +41,11 @@
 .tooltip-icon:hover > .tooltip {
 	transform: scale(1);
 }
+
+.show > .tooltip {
+	transform: scale(1);
+}
+
 .tooltip-icon img {
 	width: 20px;
 }

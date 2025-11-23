@@ -10,7 +10,7 @@
 	mask-composite: exclude;
 	-webkit-mask-composite: xor;
 	max-width: 310px;
-	font-family: "hind", sans-serif;
+	font-family: "hind", "Ubuntu", sans-serif;
 	box-sizing: border-box;
 	color: white;
 }
