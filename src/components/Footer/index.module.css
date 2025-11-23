@@ -1,26 +1,83 @@
 .footer {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    text-align: center;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	text-align: center;
 
-    & > * {
-        display: flex;
-    }
+	& > * {
+		display: flex;
+	}
 
-    & > div {
-        font: 25px "Ubuntu", sans-serif;
-        display: flex;
-        gap: 10px;
-    }
+	& > div {
+		font: 25px "Ubuntu", sans-serif;
+		display: flex;
+		gap: 10px;
+	}
 
-    & img {
-        width: 40px;
-    }
+	& img {
+		width: 40px;
+	}
 
-    @media screen and (max-width: 920px) {
-        flex-direction: column;
-        gap: 10px;
-    }
+	& button {
+		padding: 0;
+		width: 40px;
+	}
+
+	@media screen and (max-width: 920px) {
+		flex-direction: column;
+		gap: 10px;
+	}
+}
+
+.success {
+	display: block;
+	position: absolute;
+	color: #b6b7b7;
+	background: #18191c;
+	padding: 0.4rem;
+	border-radius: 3px;
+	max-width: 200px;
+	width: max-content;
+	font-size: 0.9rem;
+	transform: scale(0);
+	transition: 0.055s ease-in-out transform;
+	z-index: 10;
+	box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.35);
+	-webkit-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.35);
+	right: 0;
+}
+
+.success-up {
+}
+
+.success-icon {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	margin: 8px;
+}
+
+.success-up::before {
+	position: absolute;
+	bottom: -5px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 0;
+	height: 0;
+	border-left: 6px solid transparent;
+	border-right: 6px solid transparent;
+	border-top: 6px solid #18191c;
+}
+
+.success-icon:hover > .success {
+	transform: scale(1);
+}
+
+.show > .success {
+	transform: scale(1);
+}
+
+.success-icon img {
+	width: 20px;
 }
