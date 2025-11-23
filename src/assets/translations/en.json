@@ -36,5 +36,7 @@
 	"projects.pb.tooltip": "A project that brings players together for the sake of creativity. Using zustand, preact, and pixi.js technologies.",
 	"projects.mae.about": "Addon for Mystical Agriculture, adds new crop types and other ideas...",
 	"projects.mae.button": "Curseforge",
-	"projects.mae.tooltip": "Experience working with other people's code and integration."
+	"projects.mae.tooltip": "Experience working with other people's code and integration.",
+
+	"footer.copied": "Copied to clipboard!"
 }

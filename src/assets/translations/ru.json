@@ -36,5 +36,7 @@
 	"projects.pb.tooltip": "Проект, объединяющий игроков ради творчества. Использует технологии zustand, preact и pixi.js.",
 	"projects.mae.about": "Аддон на Mystical Agriculture, добавляет новые растения и другое...",
 	"projects.mae.button": "Curseforge",
-	"projects.mae.tooltip": "Опыт работы с чужим кодом и интеграцией."
+	"projects.mae.tooltip": "Опыт работы с чужим кодом и интеграцией.",
+
+	"footer.copied": "Скопировано в буфер обмена!"
 }

@@ -36,7 +36,7 @@ body.snow::before {
 
 body.rain::before {
 	background-image: url(/assets/background-r.svg);
-	opacity: 0.8; /*sssы*/
+	opacity: 0.8; /*sssss*/
 }
 
 body.autumn::before {

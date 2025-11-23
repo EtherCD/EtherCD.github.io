@@ -1,5 +1,6 @@
 import { useState } from "preact/hooks";
 import styles from "./index.module.css";
+import { Translation } from "i18nano";
 
 const email = "ethercd@proton.me";
 
@@ -35,7 +36,15 @@ export const Footer = () => {
 				</a>
 				<div class={styles["email-icon"] + " " + (show ? styles["show"] : "")} onClick={copyToClipboard}>
 					<img src="/icons/email.svg" alt="email" />
-					<div class={`${styles.msg} ${styles["msg-up"]}`}>{!success ? email : "Copied to clipboard!"}</div>
+					<div class={`${styles.msg} ${styles["msg-up"]}`}>
+						{!success ? (
+							<a href="mailto:ethercd@proton.me" target="_blank">
+								ethercd@proton.me
+							</a>
+						) : (
+							<Translation path={"footer.copied"} />
+						)}
+					</div>
 				</div>
 			</div>
 		</footer>
