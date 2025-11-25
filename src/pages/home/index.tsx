@@ -87,7 +87,7 @@ export const HomePage = () => {
 							.
 						</p>
 					</Skill>
-					<Skill header={i18n("can.1")} img="/assets/aether.svg" accentColor="#83A598" additionalColor="#282828" cardUrl="/assets/aether-card.svg">
+					<Skill header={i18n("can.1")} img="/assets/aether.svg" accentColor="#83A598" additionalColor="#282828" deg={270 - 38} cardUrl="/assets/aether-card.svg">
 						<p>
 							<Translation path={"can.connections.0"} />
 						</p>

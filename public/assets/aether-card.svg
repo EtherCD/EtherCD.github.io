@@ -38,15 +38,15 @@
 <pattern id="pattern0_138_206" patternContentUnits="objectBoundingBox" width="1" height="1">
 <use xlink:href="#image0_138_206" transform="scale(0.00458716)"/>
 </pattern>
-<linearGradient id="paint0_linear_138_206" x1="139" y1="0" x2="139" y2="340" gradientUnits="userSpaceOnUse">
+<linearGradient id="paint0_linear_138_206" x1="240.845" y1="1.05535e-06" x2="37.1547" y2="340" gradientUnits="userSpaceOnUse">
 <stop stop-color="#83A598"/>
 <stop offset="1" stop-color="#282828"/>
 </linearGradient>
-<linearGradient id="paint1_linear_138_206" x1="139" y1="0" x2="139" y2="340" gradientUnits="userSpaceOnUse">
+<linearGradient id="paint1_linear_138_206" x1="239.962" y1="1.98972e-06" x2="38.0385" y2="340" gradientUnits="userSpaceOnUse">
 <stop stop-color="#83A598"/>
 <stop offset="1" stop-color="#282828"/>
 </linearGradient>
-<linearGradient id="paint2_linear_138_206" x1="135" y1="91" x2="135" y2="191" gradientUnits="userSpaceOnUse">
+<linearGradient id="paint2_linear_138_206" x1="165.089" y1="91" x2="104.911" y2="191" gradientUnits="userSpaceOnUse">
 <stop stop-color="#83A598"/>
 <stop offset="1" stop-color="#282828"/>
 </linearGradient>

@@ -8,6 +8,7 @@ interface Props {
 	additionalColor: string;
 	cardUrl: string;
 	children: preact.ComponentChild;
+	deg?: number;
 }
 
 export const Skill = (props: Props) => {
@@ -19,6 +20,7 @@ export const Skill = (props: Props) => {
 				"--accent": props.accentColor,
 				"--additional": props.additionalColor,
 				"--card-url": `url(${props.cardUrl})`,
+				"--deg": `${props.deg ?? 180}deg`,
 			}}
 			onClick={() => setFlipped(!flipped)}
 		>
