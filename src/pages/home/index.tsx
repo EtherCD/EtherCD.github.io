@@ -29,11 +29,18 @@ export const HomePage = () => {
 						<Button
 							onClick={() => {
 								next();
-								console.log("FUCK?");
 							}}
 							accentColor={"#cc241d"}
 						>
 							<Translation path={"button.mode." + mode} />
+						</Button>
+						<Button
+							onClick={() => {
+								document.location.href = "https://darky.day";
+							}}
+							accentColor={"#4b4441"}
+						>
+							<Translation path={"button.dark"} />
 						</Button>
 					</div>
 				</div>
