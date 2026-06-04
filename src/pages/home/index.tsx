@@ -9,6 +9,7 @@ import { LanguageSelect } from "../../components/LanguageSelect";
 import { useEffectMode } from "../../stores/mode";
 import { Button } from "../../components/Basic/Button";
 import { Skill } from "../../components/Skill";
+import {Section} from "../../components/Basic/Section";
 
 export const HomePage = () => {
 	const i18n = useTranslation();
@@ -75,7 +76,7 @@ export const HomePage = () => {
 				</div>
 			</section>
 
-			<section class={styles.projects_section}>
+			<Section register={true}>
 				<h1 id="work" class={styles.projects}>
 					<Translation path={"can.title"} />
 				</h1>
@@ -110,9 +111,9 @@ export const HomePage = () => {
 						</p>
 					</Skill>
 				</div>
-			</section>
+			</Section>
 
-			<section class={styles.projects_section}>
+			<Section>
 				<h1 id="projects" class={styles.projects}>
 					<Translation path={"h1.projects"} />
 				</h1>
@@ -121,7 +122,7 @@ export const HomePage = () => {
 					<PixelBattleCard />
 					<MysticalAgriexpansion />
 				</div>
-			</section>
+			</Section>
 
 			<Footer></Footer>
 		</div>

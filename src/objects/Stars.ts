@@ -1,5 +1,5 @@
-import { random } from "../../utils/random";
-import { Effect } from "./Effect";
+import { random } from "../utils/random.ts";
+import { Effect } from "./Effect.ts";
 
 interface Particle {
 	x: number;
@@ -85,5 +85,10 @@ export class StarEffect extends Effect {
 				p.s = 1000;
 			}
 		}
+	}
+
+	// @ts-ignore
+	registerSection(x: number, y: number, width: number): void {
+
 	}
 }

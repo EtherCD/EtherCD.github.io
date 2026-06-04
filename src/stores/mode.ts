@@ -21,7 +21,7 @@ function getSeasonDefault() {
 
 	if (month === 12 || month <= 2) return WebSiteEffect.SNOW;
 	if (month >= 9) return WebSiteEffect.AUTUMN;
-	return WebSiteEffect.STARS;
+	return WebSiteEffect.RAIN;
 }
 
 export const useEffectMode = create<EffectModeState>()(

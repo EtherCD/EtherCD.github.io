@@ -1,5 +1,6 @@
-import { random } from "../../utils/random";
-import { Effect } from "./Effect";
+import { random } from "../utils/random.ts";
+import { Effect } from "./Effect.ts";
+import type {SectionBoundary} from "../stores/effect.ts";
 
 interface Particle {
 	x: number;
@@ -10,14 +11,18 @@ interface Particle {
 	t: number;
 	xs: number;
 	ys: number;
+	temp: number;
 }
 
 export class LeafFallEffect extends Effect {
+
 	maxParts = 50;
 	particles: Particle[] = [];
 	delay = random(300, 500);
 	time = Date.now();
 	images: HTMLImageElement[] = [];
+	sections: Array<SectionBoundary> = [];
+
 	constructor(width: number, height: number) {
 		super(width, height);
 		for (var a = 0; a < this.maxParts; a++) {
@@ -30,6 +35,7 @@ export class LeafFallEffect extends Effect {
 				t: Math.random() > 0.5 ? 1 : 0,
 				xs: random(-0.5, 0.5),
 				ys: random(0.2, 1),
+				temp: 0,
 			});
 		}
 		const list = ["/assets/leaf.svg", "/assets/leaf-2.svg"];
@@ -58,6 +64,7 @@ export class LeafFallEffect extends Effect {
 
 			const angle = minAngle + t * (maxAngle - minAngle);
 
+			ctx.globalAlpha = p.temp === 0 ? 1 : p.temp;
 			ctx.rotate(angle);
 
 			ctx.beginPath();
@@ -66,8 +73,20 @@ export class LeafFallEffect extends Effect {
 
 			ctx.restore();
 
-			p.y += p.ys * timeFix;
-			p.x += p.xs * timeFix + sway * 0.3;
+			if (p.temp > 0) {
+				p.temp -= 0.1 * timeFix;
+			} else {
+				p.y += p.ys * timeFix;
+				p.x += p.xs * timeFix + sway * 0.3;
+			}
+
+
+			if (p.temp === 0)
+				for (let section of this.sections) {
+					if (p.x > section.x && p.x < section.x + section.width && p.y > section.y - p.s / 2) {
+						p.temp = random(6, 12);
+					}
+				}
 
 			if (p.y > height + p.s) {
 				p.y = random(-50, -10);
@@ -77,6 +96,19 @@ export class LeafFallEffect extends Effect {
 				p.x = random(0, width);
 				p.y = random(-50, -10);
 			}
+			if (p.temp < 0) {
+				p.x = random(0, width);
+				p.y = random(-50, -10);
+				p.temp = 0;
+			}
 		}
+	}
+
+	registerSection(x: number, y: number, width: number): void {
+		this.sections.push({
+			x,
+			y,
+			width
+		})
 	}
 }
