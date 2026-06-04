@@ -6,7 +6,7 @@ export const Background = () => {
 	const refs = useRef<HTMLCanvasElement | null>(null);
 	const [ctx, setCtx] = useState<CanvasRenderingContext2D>();
 	const { mode } = useEffectMode();
-	const { current, update } = useEffectState();
+	const { update } = useEffectState();
 
 	const onResize = () => {
 		if (!refs.current!) return;
@@ -18,6 +18,7 @@ export const Background = () => {
 
 	const draw = () => {
 		requestAnimationFrame(draw);
+		const current = useEffectState.getState().current;
 		if (ctx) {
 			const width = document.body.clientWidth;
 			const height = document.body.clientHeight;
