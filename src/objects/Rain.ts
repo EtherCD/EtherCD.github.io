@@ -73,7 +73,7 @@ export class RainEffect extends Effect {
 
 			if (p.temp === 0)
 				for (let section of this.sections) {
-					if (p.x > section.x && p.x < section.x + section.width && p.y > section.y - p.height) {
+					if (p.x > section.x && p.x < section.x + section.width && p.y > section.y) {
 						p.height += (section.y - p.y) * timeFix;
 						if (!p.triggered)
 							for (let i = 0; i < this.maxSpray; i++) {

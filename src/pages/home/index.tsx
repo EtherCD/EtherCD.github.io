@@ -55,8 +55,8 @@ export const HomePage = () => {
 						userLabel="DEV"
 						memberSince="Aug 30, 2007"
 						nitro={{
-							accent: "#886636",
-							additional: "#f3ca88",
+							accent: "#ef5c17",
+							additional: "#230603",
 						}}
 						roles={[
 							{ name: "TypeScript", color: "#3178C6" },

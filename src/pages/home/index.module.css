@@ -13,9 +13,9 @@
 			width: 100%;
 		}
 
-		& > h1 body.autumn::before {
-			background: linear-gradient(180deg, #ffd200 0%, #9c5708 50%);
-		}
+		/*& > h1,  body.autumn::before {*/
+		/*	background: linear-gradient(180deg, #9c570855 0%, #9c570800 50%);*/
+		/*}*/
 	}
 }
 

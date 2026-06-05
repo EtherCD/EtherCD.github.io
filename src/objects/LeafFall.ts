@@ -12,6 +12,7 @@ interface Particle {
 	xs: number;
 	ys: number;
 	temp: number;
+	maxTemp: number;
 }
 
 export class LeafFallEffect extends Effect {
@@ -36,6 +37,7 @@ export class LeafFallEffect extends Effect {
 				xs: random(-0.5, 0.5),
 				ys: random(0.2, 1),
 				temp: 0,
+				maxTemp: 0,
 			});
 		}
 		const list = ["/assets/leaf.svg", "/assets/leaf-2.svg"];
@@ -64,7 +66,7 @@ export class LeafFallEffect extends Effect {
 
 			const angle = minAngle + t * (maxAngle - minAngle);
 
-			ctx.globalAlpha = p.temp === 0 ? 1 : p.temp;
+			ctx.globalAlpha = p.temp === 0 ? 1 : p.temp / p.maxTemp;
 			ctx.rotate(angle);
 
 			ctx.beginPath();
@@ -85,6 +87,7 @@ export class LeafFallEffect extends Effect {
 				for (let section of this.sections) {
 					if (p.x > section.x && p.x < section.x + section.width && p.y > section.y - p.s / 2) {
 						p.temp = random(6, 12);
+						p.maxTemp = p.temp;
 					}
 				}
 
