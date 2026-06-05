@@ -10,6 +10,7 @@ interface Particle {
 	speed: number;
 	alpha: number;
 	temp: number;
+	triggered: boolean;
 }
 
 export class RainEffect extends Effect {
@@ -35,6 +36,7 @@ export class RainEffect extends Effect {
 				speed: random(15, 30),
 				alpha: random(0.5, 1),
 				temp: 0,
+				triggered: false,
 			});
 		}
 	}
@@ -73,19 +75,23 @@ export class RainEffect extends Effect {
 				for (let section of this.sections) {
 					if (p.x > section.x && p.x < section.x + section.width && p.y > section.y - p.height) {
 						p.height += (section.y - p.y) * timeFix;
-						for (let i = 0; i < this.maxSpray; i++) {
-							const size = random(2, 5);
+						if (!p.triggered)
+							for (let i = 0; i < this.maxSpray; i++) {
+								const size = random(2, 5);
 
-							this.particles.push({
-								x: p.x,
-								y: p.y - size,
-								width: size,
-								height: size,
-								speed: random(1, 2),
-								alpha: random(0.2, 1),
-								temp: random((5 * Math.PI) / 6, Math.PI / 6)
-							})
-						}
+								this.particles.push({
+									x: p.x,
+									y: p.y - size,
+									width: size,
+									height: size,
+									speed: random(1, 2),
+									alpha: random(0.2, 1),
+									temp: random((5 * Math.PI) / 6, Math.PI / 6),
+									triggered: false,
+								})
+							}
+						p.triggered = true;
+
 					}
 				}
 			if (p.temp === 0)
@@ -93,6 +99,7 @@ export class RainEffect extends Effect {
 					p.x = random(0, width);
 					p.y = random(-100, 0);
 					p.height = random(10, 20);
+					p.triggered = false;
 				}
 			if (p.alpha <= 0) {
 				delete this.particles[i];

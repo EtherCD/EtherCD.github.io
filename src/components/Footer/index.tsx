@@ -25,7 +25,7 @@ export const Footer = () => {
 
 	return (
 		<footer class={styles.footer}>
-			<h1 id="contacts">@EtherCD - 2025</h1>
+			<h1 className={styles.credits}>@EtherCD - 2025</h1>
 			<div class={styles.contacts}>
 				<p>Contacts - </p>
 				<a href="https://github.com/EtherCD" target="_blank">
@@ -38,7 +38,7 @@ export const Footer = () => {
 					<img src="/icons/email.svg" alt="email" />
 					<div class={`${styles.msg} ${styles["msg-up"]}`}>
 						{!success ? (
-							<a href="mailto:ethercd@proton.me" target="_blank">
+							<a href="mailto:ethercd@proton.me" target="_blank" className={styles.email}>
 								ethercd@proton.me
 							</a>
 						) : (

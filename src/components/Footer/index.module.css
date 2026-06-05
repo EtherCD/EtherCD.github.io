@@ -4,6 +4,8 @@
 	justify-content: space-between;
 	align-items: center;
 	text-align: center;
+	background: #000;
+	padding: 10px;
 
 	& > * {
 		display: flex;
@@ -66,4 +68,18 @@
 	transform: scale(1);
 	left: 50%;
 	transform: translateX(-50%);
+}
+
+.credits {
+	font-size: 1.5rem;
+}
+
+.email {
+	color: white;
+	user-select: none;
+	text-decoration-style: unset;
+}
+
+.email:focus {
+	color:white;
 }
