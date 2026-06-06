@@ -17,6 +17,10 @@ export class StarEffect extends Effect {
 	time = Date.now();
 	constructor(width: number, height: number) {
 		super(width, height);
+
+	}
+
+	init(width: number, height: number) {
 		for (var a = 0; a < this.maxParts; a++) {
 			this.particles.push({
 				x: random(0, width),

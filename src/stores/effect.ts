@@ -30,7 +30,9 @@ export const useEffectState = create<EffectModeState>(
         current: effectObjects[useEffectMode.getState().mode],
         update() {
             const effectMode = useEffectMode.getState().mode;
-            set({ current: effectObjects[effectMode] });
+            let effect = effectObjects[effectMode];
+            effect.init(document.body.clientWidth, document.body.clientHeight);
+            set({ current: effect });
         },
         registerSection(boundary: SectionBoundary) {
             for (const effectId in WebSiteEffect) {

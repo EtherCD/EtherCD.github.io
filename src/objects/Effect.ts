@@ -5,4 +5,6 @@ export abstract class Effect {
 	abstract render(ctx: CanvasRenderingContext2D, width: number, height: number): void;
 
 	abstract registerSection(x: number, y: number, width: number): void;
+
+	abstract init(width: number, height: number): void;
 }

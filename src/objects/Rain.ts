@@ -27,6 +27,9 @@ export class RainEffect extends Effect {
 			this.maxParts = 100;
 			this.maxSpray = 1;
 		}
+	}
+
+	init(width: number, height: number) {
 		for (var a = 0; a < this.maxParts; a++) {
 			this.particles.push({
 				x: random(0, width) - 10,

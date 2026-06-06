@@ -26,7 +26,17 @@ export class LeafFallEffect extends Effect {
 
 	constructor(width: number, height: number) {
 		super(width, height);
-		for (var a = 0; a < this.maxParts; a++) {
+
+		const list = ["/assets/leaf.svg", "/assets/leaf-2.svg"];
+		for (const i of list) {
+			const img = new Image();
+			img.src = i;
+			this.images.push(img);
+		}
+	}
+
+	init(width: number, height: number) {
+		for (let a = 0; a < this.maxParts; a++) {
 			this.particles.push({
 				x: random(0, width) - 10,
 				y: random(0, height) - 10,
@@ -39,12 +49,6 @@ export class LeafFallEffect extends Effect {
 				temp: 0,
 				maxTemp: 0,
 			});
-		}
-		const list = ["/assets/leaf.svg", "/assets/leaf-2.svg"];
-		for (const i of list) {
-			const img = new Image();
-			img.src = i;
-			this.images.push(img);
 		}
 	}
 
