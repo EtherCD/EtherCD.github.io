@@ -36,6 +36,7 @@ export class LeafFallEffect extends Effect {
 	}
 
 	init(width: number, height: number) {
+		this.particles = [];
 		for (let a = 0; a < this.maxParts; a++) {
 			this.particles.push({
 				x: random(0, width) - 10,

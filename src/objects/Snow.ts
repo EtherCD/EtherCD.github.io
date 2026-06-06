@@ -23,6 +23,7 @@ export class SnowEffect extends Effect {
 	}
 
 	init(width: number, height: number) {
+		this.particles = [];
 		for (var a = 0; a < this.maxParts; a++) {
 			this.particles.push({
 				x: random(0, width),

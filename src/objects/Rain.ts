@@ -109,12 +109,12 @@ export class RainEffect extends Effect {
 				delete this.particles[i];
 			}
 		}
-		this.delay--;
-		if (this.delay < 0) {
-			ctx.fillStyle = "rgba(255,255,255,0.6)";
-			ctx.fillRect(0, 0, width, height);
-			this.delay = random(800, 1500);
-		}
+		// this.delay--;
+		// if (this.delay < 0) {
+		// 	ctx.fillStyle = "rgba(255,255,255,0.6)";
+		// 	ctx.fillRect(0, 0, width, height);
+		// 	this.delay = random(800, 1500);
+		// }
 	}
 
 	registerSection(x: number, y: number, width: number): void {
